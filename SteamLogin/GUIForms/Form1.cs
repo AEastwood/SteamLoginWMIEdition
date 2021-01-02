@@ -48,7 +48,7 @@ namespace SteamLogin
         private void Form1_Load(object sender, EventArgs e)
         {
             if (!CheckSteamInstallPathExists()) throw new Exception("Steam file does not exist");
-            key = hwid.getUniqueID();
+            key = hwid.GetUniqueID();
 
             var serverConfig = new ServerConfig()
             {
