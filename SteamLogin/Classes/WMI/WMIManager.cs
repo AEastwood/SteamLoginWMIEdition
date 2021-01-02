@@ -51,7 +51,7 @@ namespace SteamLogin.Classes
             foreach (ManagementObject WMIResult in WMIResults)
             {
                 if (WMIResult == null) throw new NullReferenceException(JsonConvert.SerializeObject(WMIResult));
-                if (WMIResult["ElementName"].ToString() == "ADAM") continue;
+                if (WMIResult["ElementName"].ToString() == Environment.MachineName) continue;
 
                 try
                 {
